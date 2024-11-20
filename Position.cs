@@ -21,6 +21,6 @@ public struct Position
 
     public override int GetHashCode()
     {
-        return X.GetHashCode() ^ Y.GetHashCode();
+        return X.GetHashCode() ^ Y.GetHashCode(); // Đảm bảo rằng các đối tượng 'Position' có cùng tọa độ với mã 'hash'
     }
 }
