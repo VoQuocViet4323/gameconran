@@ -132,7 +132,7 @@ class Game
 
         Console.CursorVisible = false;
 
-        snake.Add(new Position(screenWidth / 2, screenHeight / 2));
+        snake.Add(new Position(screenWidth / 2, screenHeight / 4));
         GenerateFood();
 
         while (!gameOver)
@@ -201,12 +201,12 @@ class Game
         }
     }
 
-    // private void PauseGame()
-    // {
-    //     Console.SetCursorPosition(0, screenHeight + 1);
-    //     Console.WriteLine("Game paused. Press any key to continue...");
-    //     Console.ReadKey(true);
-    // }
+    private void PauseGame()
+    {
+        Console.SetCursorPosition(0, screenHeight + 1);
+        Console.WriteLine("Game paused. Press any key to continue...");
+        Console.ReadKey(true);
+    }
 
 
     private void Update()
@@ -305,5 +305,4 @@ class Game
         Console.SetCursorPosition(0, screenHeight);
         Console.Write($"Score: {score} | Speed: {speed}ms");
     }
-
 }
